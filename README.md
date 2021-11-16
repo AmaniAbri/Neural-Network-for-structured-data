@@ -1,5 +1,5 @@
 # Nural-Network-for-structured-data
-A machine learning toolkit dedicated to time-series data analysis in Python. The ANN model prformance is 
+    A machine learning toolkit dedicated to time-series data analysis in Python. The ANN model prformance is 
 @author: aamani
 """
 
@@ -9,8 +9,13 @@ Spyder Editor
 
 This is a temporary script file.
 """
+# Describtion
+    Python code for predicting the variability of the cloud cover in respone to the variability to the Oceanic Climatic Indecies  
+   
+   
+# Installition
 
-# Python code for predicting the variability of the cloud cover in respone to the variability to the Oceanic Climatic Indecies  
+
 import random 
 import numpy as np 
 import numpy as std
