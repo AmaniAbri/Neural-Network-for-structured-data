@@ -6,9 +6,9 @@ a Python code for predicting the variability of the cloud cover in respone to th
 
 ## Installation
 
--Tensorflow can be installed in different ways:
--kjkvkhk
--jhkh
+- Tensorflow can be installed in different ways:
+- kjkvkhk
+- jhkh
 
 
  
