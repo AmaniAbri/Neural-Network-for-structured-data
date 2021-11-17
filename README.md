@@ -20,7 +20,7 @@ Load the saved dataframe containing all the input variables and target. The time
 The time formate is MM/DD/YEAR. The input variables and target saved as .csv file.
 ``` ruby
 >>> variables = ['Variable 1','Variable 2','Variable 3','Variable 4','Variable 5','Variable 6','Variable 7','Variable 8','sum']
->>> df = pd.read_csv('...csv', index_col=0)
+>>> df = pd.read_csv('.csv', index_col=0)
 >>> df.columns = variables
 >>> df.index = pd.to_datetime(df.index)
 ```
