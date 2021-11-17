@@ -1,6 +1,7 @@
 # Hello 👋
-# ML for time-series
+# ML for structured data
 A machine learning toolkit dedicated to time-series data analysis in Python.
+
 ## Describtion
  Tenorflow is used to create ANN model. 
 
@@ -29,10 +30,9 @@ Load the saved dataframe containing all the input variables and target. The time
 ```
 >>> plt.figure()
 >>> df.plot(ylim = (0,1),figsize=(8,4))
->>> plt.ylabel('Value')
 >>> plt.legend(loc='center left', bbox_to_anchor=(1.0, .8))
 >>> plt.tight_layout()
->>> plt.savefig('Plot_data.png')
+
 ```
 
 
@@ -92,28 +92,58 @@ five hidden layer
 ```
 
 ### applying Earlystopping
-```earlystop_callback = EarlyStopping(
+```ruby
+>>>earlystop_callback = EarlyStopping(
   monitor='val_loss', min_delta=0.0001,
   patience=10)
 ```
 shuffle train set
 
 
-# Train model for 30  batch size of 100: 
-NUM_EPOCHS= #(train setsize/batch size)
-BATCH_SIZE=10
+## Training the model 
+```ruby
+>>> NUM_EPOCHS= #(train setsize/batch size)
+>>> BATCH_SIZE=10
 
-history=model.fit(np.array(X_train_scaled),np.array(Y_train),callbacks=[earlystop_callback],
+>>> history=model.fit(np.array(X_train_scaled),np.array(Y_train),callbacks=[earlystop_callback],
                 batch_size=BATCH_SIZE, 
                 epochs=NUM_EPOCHS,
                 validation_split=0.1,
                 verbose=1
                 )
-print('Loss: ', history.history['loss'][-1], '\nVal_loss: ', history.history['val_loss'][-1],  '\nmae: ', history.history['mae'][-1])
+>>> print('Loss: ', history.history['loss'][-1], '\nVal_loss: ', history.history['val_loss'][-1],  '\nmae: ', history.history['mae'][-1])
+
+```
+## Evaluating the model using train/val loss during training 
+```ruby
+>>> plt.plot(history.history['loss'],'blue',label='Training loss')
+>>> plt.plot(history.history['val_loss'],'r',label='Test loss')
+>>> plt.legend(loc='upper right')
+>>> plt.xlabel('epochs')
+>>> plt.ylabel('Loss, [mse]')
+>>> plt.show()
+```
 
 
+## Predictions
+```ruby
+>>> y_pred= pd.DataFrame(model.predict(X_test_scaled))
+>>> y_pred.index = Y_test.index
 
+>>> y_pred_Train=pd.DataFrame(model.predict(X_train_scaled))
+>>> y_pred_Train.index = Y_train.index
+```
 
- 
- ## Comparing the ANN model with different ML models
+## Testing the performance of the model
+``` ruby
+>>> from keras import backend as K
+>>> Ypred=y_pred[0]
+>>> ytest=Y_test['sum']
+>>> def root_mean_squared_error(ytest, Ypred):
+        return K.sqrt(K.mean(K.square(Ypred - ytest)))
+>>> ANNloss=root_mean_squared_error(ytest, Ypred)
+>>> print("losss:",ANNloss)
+```
+
+## Comparing the ANN model with different ML models
 
