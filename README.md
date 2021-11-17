@@ -1,6 +1,6 @@
 # Hello 👋
 # ML for structured data
-A machine learning toolkit dedicated to time-series data analysis in Python.
+A machine learning model dedicated to time-series data analysis in Python.
 
 ## Describtion
  Tenorflow is used to create ANN model. 
@@ -16,7 +16,8 @@ or ```conda```
 ``` activate tensorflow```
 
 ## Getting dataset ready 
-Load the saved dataframe containing all the input variables and target. The time coloumn is the index with a shift =12Mo. The time formate is MM/DD/YEAR. The input variables and target saved as .csv file.
+Load the saved dataframe containing all the input variables and target. The time coloumn is the index with a shift =12Mo.
+The time formate is MM/DD/YEAR. The input variables and target saved as .csv file.
 ``` ruby
 >>> variables = ['Variable 1','Variable 2','Variable 3','Variable 4','Variable 5','Variable 6','Variable 7','Variable 8','sum']
 >>> df = pd.read_csv('...csv', index_col=0)
@@ -39,7 +40,8 @@ Load the saved dataframe containing all the input variables and target. The time
 ## train and test set. 
 ``` ruby
 >>>target= 'sum'
->>>test_split = 0.25
+the split should be between a year interval
+>>>test_split = 0.25 
 
 >>>test_samp = np.int(np.floor(test_split*len(df)))
 >>>df_train = df[test_samp:]
@@ -97,7 +99,6 @@ five hidden layer
   monitor='val_loss', min_delta=0.0001,
   patience=10)
 ```
-shuffle train set
 
 
 ## Training the model 
@@ -145,5 +146,6 @@ shuffle train set
 >>> print("losss:",ANNloss)
 ```
 
-## Comparing the ANN model with different ML models
+
+
 
