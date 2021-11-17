@@ -26,7 +26,7 @@ The time formate is MM/DD/YEAR. The input variables and target saved as .csv fil
 ```
 
 
-### plot the variables
+### Plot the variables
 
 ```
 >>> plt.figure()
@@ -37,7 +37,7 @@ The time formate is MM/DD/YEAR. The input variables and target saved as .csv fil
 ```
 
 
-## train and test set. 
+## Train and Test sets. 
 ``` ruby
 >>>target= 'sum'
 the split should be between a year interval
@@ -93,7 +93,7 @@ five hidden layer
 >>>model.add(Dense(1,kernel_initializer='glorot_uniform',   kernel_regularizer=regularizers.l2(0.001)))
 ```
 
-### applying Earlystopping
+### Applying Earlystopping
 ```ruby
 >>>earlystop_callback = EarlyStopping(
   monitor='val_loss', min_delta=0.0001,
