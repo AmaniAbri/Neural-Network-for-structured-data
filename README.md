@@ -1,6 +1,6 @@
 # Hello 👋
 # ML for structured data
-A machine learning model dedicated to time-series data analysis in Python.
+A machine learning model dedicated to 1-D time-series data analysis in Python.
 
 ## Describtion
  Tenorflow is used to create ANN model. 
