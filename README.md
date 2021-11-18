@@ -16,7 +16,7 @@ or ```conda```
 ``` activate tensorflow```
 
 ## Getting dataset ready 
-Load the saved dataframe containing all the input variables and target. The time coloumn is the index with a shift =12Mo.
+Load the saved dataframe containing all the input variables and target using pandas. The time coloumn is the index with a shift =12Mo.
 The time formate is MM/DD/YEAR. The input variables and target saved as .csv file.
 ``` ruby
 >>> variables = ['Variable 1','Variable 2','Variable 3','Variable 4','Variable 5','Variable 6','Variable 7','Variable 8','sum']
