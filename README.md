@@ -140,7 +140,7 @@ five hidden layer
 ``` ruby
 >>> from keras import backend as K
 >>> Ypred=y_pred[0]
->>> ytest=Y_test['sum']
+>>> ytest=Y_test['target']
 >>> def root_mean_squared_error(ytest, Ypred):
         return K.sqrt(K.mean(K.square(Ypred - ytest)))
 >>> ANNloss=root_mean_squared_error(ytest, Ypred)
@@ -149,7 +149,7 @@ five hidden layer
 
 ## Calculate percentage error betwen real and predicted values
 ```ruby
->>> perc_err = (( y_pred[0] - Y_test['sum']  ))
+>>> perc_err = (( y_pred[0] - Y_test['target']  ))
 >>> per_std=np.std(perc_err)
 >>> per_max=max(perc_err)
 >>> per_min=min(perc_err)
