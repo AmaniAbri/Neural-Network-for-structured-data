@@ -19,7 +19,7 @@ or ```conda```
 Load the saved dataframe containing all the input variables and target using pandas. The time coloumn is the index with a shift =12Mo.
 The time formate is MM/DD/YEAR. The input variables and target saved as .csv file.
 ``` ruby
->>> variables = ['Variable 1','Variable 2','Variable 3','Variable 4','Variable 5','Variable 6','Variable 7','Variable 8','sum']
+>>> variables = ['Variable 1','Variable 2','Variable 3','Variable 4','Variable 5','Variable 6','Variable 7','Variable 8','target']
 >>> df = pd.read_csv('.csv', index_col=0)
 >>> df.columns = variables
 >>> df.index = pd.to_datetime(df.index)
@@ -39,7 +39,7 @@ The time formate is MM/DD/YEAR. The input variables and target saved as .csv fil
 
 ## Train and Test sets. 
 ``` ruby
->>>target= 'sum'
+>>>target= 'target'
 the split should be between a year interval
 >>>test_split = 0.25 
 
