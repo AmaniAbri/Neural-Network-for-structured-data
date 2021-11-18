@@ -3,7 +3,7 @@
 A machine learning model dedicated to 1-D time-series data analysis in Python.
 
 ## Describtion
- Tenorflow is used to create ANN model. 
+ The “Sequential” is used here to create a Keras model with TensorFlow.
 
 ## Installation
 
