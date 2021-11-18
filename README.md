@@ -126,6 +126,7 @@ five hidden layer
 ```
 
 
+
 ## Predictions
 ```ruby
 >>> y_pred= pd.DataFrame(model.predict(X_test_scaled))
@@ -146,6 +147,17 @@ five hidden layer
 >>> print("losss:",ANNloss)
 ```
 
+## Calculate percentage error betwen real and predicted values
+```ruby
+>>> perc_err = (( y_pred[0] - Y_test['sum']  ))
+>>> per_std=np.std(perc_err)
+>>> per_max=max(perc_err)
+>>> per_min=min(perc_err)
 
-
+### Positive or negative
+>>> neg_count = len(list(filter(lambda x: (x < 0), perc_err)))
+  
+### we can also do len(list1) - neg_count
+>>> pos_count = len(list(filter(lambda x: (x >= 0), perc_err)))
+```
 
