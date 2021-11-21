@@ -3,7 +3,7 @@
 A machine learning model dedicated to 1-D time-series data analysis in Python.
 
 ## Describtion
- The “Sequential” is used here to create a Keras model with TensorFlow.
+ The “Sequential” is used here to create a Keras model with TensorFlow. The data set is containing 40 years of climatic variables and each year has 12 months of data. 
 
 ## Installation
 
@@ -38,6 +38,7 @@ The time formate is MM/DD/YEAR. The input variables and target saved as .csv fil
 
 
 ## Train and Test sets. 
+filter and train on only the first 30 years of session data in the 40 years dataset.
 ``` ruby
 >>>target= 'target'
 the split should be between a year interval
@@ -102,6 +103,7 @@ five hidden layer
 
 
 ## Training the model 
+
 ```ruby
 >>> NUM_EPOCHS= #(train setsize/batch size)
 >>> BATCH_SIZE=10
