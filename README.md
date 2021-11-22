@@ -38,7 +38,7 @@ The time formate is MM/DD/YEAR. The input variables and target saved as .csv fil
 
 
 ## Train and Test sets. 
-filter and train on only the first 30 years of session data in the 40 years dataset.
+filter and train on only the first 30 years of session data in the 40 years dataset. The split should be between Jan and Dec of successive years so the model can learna full year pattern. 
 ``` ruby
 >>>target= 'target'
 the split should be between a year interval
