@@ -1,6 +1,6 @@
 # Hello 👋
 # ML for structured data
-A machine learning model dedicated to 1-D time-series data analysis in Python.
+A machine learning model dedicated to 1-D time-series data analysis in Python. This code shows how to compare the prediction power of different models usin RMSE.
 
 ## Describtion
  The “Sequential” is used here to create a Keras model with TensorFlow. The data set is containing 40 years of climatic variables and each year has 12 months of data. 
@@ -70,7 +70,7 @@ the split should be between a year interval
 >>> X_test_scaled = scaler.transform(X_test)
 ```
 
-
+## Define Linear model 
 ## Define ANN model:
 Input layer:
 ```
